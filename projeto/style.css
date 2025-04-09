@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
 }
 
-header{
+header {
     background-color: #1c1c1c;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -18,18 +19,20 @@ nav{
     font-family: 'Bebas Neue', sans-serif;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
 }
 
-.logo{
+.logo {
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
-main{
-    max-width: 600px;
+/* ------------------- ÁREA PROTEGIDA ------------------- */
+
+.cadNovaSerie{
+    max-width: 1200px;
     margin: 30px auto;
     background-color: rgb(185, 185, 185);
     padding: 30px;
@@ -38,17 +41,17 @@ main{
     font-family: 'Nunito', sans-serif;
 }
 
-.add{
+.add {
     margin-top: 5px;
 }
 
-form label{
+.topicos{
     display: block;
     margin-top: 15px;
     font-size: 17px;
 }
 
-form input, form textarea, form button{
+.insercoes, .btnCadastrar{
     width: 100%;
     padding: 7px;
     margin-top: 3px;
@@ -57,7 +60,7 @@ form input, form textarea, form button{
     box-sizing: border-box;
 }
 
-form button{
+.btnCadastrar {
     background-color: green;
     color: white;
     border: none;
@@ -67,6 +70,9 @@ form button{
     font-size: 18px;
 }
 
-form button:hover {
+.btnCadastrar:hover {
     background-color: rgb(1, 90, 1);
 }
+
+/* ----------------------- INDEX ----------------------- */
+
