@@ -1,0 +1,51 @@
+/* === Filtro de busca === */
+.busca-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.busca-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #22597e;
+    font-size: 28px;
+}
+
+form.busca-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form.busca-form input[type="text"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+form.busca-form input[type="text"]:focus {
+    border-color: #22597e;
+    outline: none;
+}
+
+form.busca-form input[type="submit"] {
+    background-color: #22597e;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form.busca-form input[type="submit"]:hover {
+    background-color: #17425f;
+}
