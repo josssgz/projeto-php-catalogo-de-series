@@ -5,60 +5,106 @@
 }
 
 body {
+    background-color: #49738f;
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    padding-bottom: 50px;
+    padding: 20px;
 }
 
+/* Cabeçalho */
 header {
-    background-color: #1c1c1c;
-    padding: 20px 0;
-    margin-bottom: 30px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: #22597e;
+    padding: 20px;
     color: white;
-    font-size: 24px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-nav a {
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+header nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-}
-
-.logo {
-    font-size: 30px;
+    margin-left: 20px;
     font-weight: bold;
+    font-size: 16px;
 }
 
-.catalogo {
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário de busca */
+header form {
+    display: flex;
+    gap: 10px;
+}
+
+header input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+header button {
+    background-color: #fff;
+    color: #22597e;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ddd;
+}
+
+/* Conteúdo principal */
+main.catalogo {
+    padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .catalogo h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
     text-align: center;
-    margin-bottom: 30px;
 }
 
+/* Grade de cards */
 .grid-series {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
     gap: 25px;
+    margin-top: 20px;
+    justify-items: center;
 }
 
+/* Card de série */
 .serie-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    background-color: #bebebe;
     padding: 15px;
+    border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    width: 100%;
+    max-width: 220px;
 }
 
 .serie-card:hover {
@@ -67,26 +113,43 @@ nav a {
 
 .serie-card img {
     width: 100%;
-    border-radius: 10px;
     height: 300px;
     object-fit: cover;
-    margin-bottom: 15px;
-}
-
-.serie-card h3 {
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
+.serie-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Botão "Ver mais" */
 .vermais-btn {
     display: inline-block;
     padding: 10px 15px;
     background-color: #22597e;
     color: white;
-    border-radius: 5px;
     text-decoration: none;
-    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .vermais-btn:hover {
-    background-color: #1a4463;
+    background-color: #1a4564;
+}
+
+/* Responsivo */
+@media (max-width: 1000px) {
+    .grid-series {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-series {
+        grid-template-columns: 1fr;
+    }
 }
