@@ -1,88 +1,11 @@
-<<<<<<< HEAD
-*{
-=======
+
+
 * {
->>>>>>> a5c7bac6f62668f97af9cd9c7e3de8eb218caf10
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    padding-bottom: 50px;
-}
-
-header{
-    background-color: #1c1c1c;
-    padding: 20px 0;
-    margin-bottom: 30px;
-}
-
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-.logo{
-    font-size: 30px;
-    font-weight: bold;
-}
-
-/* ESTLIZAÇÃO FORMULÁRIO DE NOVA SÉRIE */
-.cadNovaSerie{
-    max-width: 1200px;
-    margin: 30px auto;
-    background-color: rgb(185, 185, 185);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    font-family: 'Nunito', sans-serif;
-}
-
-.add {
-    margin-top: 5px;
-}
-
-.topicos{
-    display: block;
-    margin-top: 15px;
-    font-size: 17px;
-}
-
-.insercoes, .btnCadastrar{
-    width: 100%;
-    padding: 7px;
-    margin-top: 3px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.btnCadastrar {
-    background-color: green;
-    color: white;
-    border: none;
-    margin-top: 30px;
-    cursor: pointer;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-}
-
-.btnCadastrar:hover {
-    background-color: rgb(1, 90, 1);
-=======
 body {
     background-color: #49738f;
     font-family: Arial, sans-serif;
@@ -196,5 +119,4 @@ h3 {
     border-radius: 5px;
     margin-top: 25px;
     font-size: 15px;
->>>>>>> a5c7bac6f62668f97af9cd9c7e3de8eb218caf10
 }
