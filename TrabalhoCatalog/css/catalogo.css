@@ -72,7 +72,6 @@ header button:hover {
     background-color: #ddd;
 }
 
-/* Conteúdo principal */
 main.catalogo {
     padding: 30px;
     max-width: 1200px;
@@ -89,7 +88,7 @@ main.catalogo {
 /* Grade de cards */
 .grid-series {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 25px;
     margin-top: 20px;
     justify-items: center;
@@ -105,15 +104,20 @@ main.catalogo {
     transition: transform 0.2s;
     width: 100%;
     max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px; 
 }
 
 .serie-card:hover {
     transform: scale(1.03);
 }
 
+
 .serie-card img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -123,9 +127,10 @@ main.catalogo {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
+    flex-grow: 1; 
 }
 
-/* Botão "Ver mais" */
+/* Botao */
 .vermais-btn {
     display: inline-block;
     padding: 10px 15px;
@@ -135,13 +140,15 @@ main.catalogo {
     border-radius: 5px;
     font-weight: bold;
     font-size: 14px;
+    margin-top: auto;
 }
 
 .vermais-btn:hover {
     background-color: #1a4564;
 }
 
-/* Responsivo */
+
+
 @media (max-width: 1000px) {
     .grid-series {
         grid-template-columns: repeat(2, 1fr);
