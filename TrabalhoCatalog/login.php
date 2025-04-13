@@ -55,10 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="submit" value="Entrar">
 
         <div class="forgot">
-            <a href="#">Esqueceu sua senha?</a>
-        </div>
-
-        <div class="forgot">
             <a href="criar-conta.php">Criar nova conta</a>
         </div>
 

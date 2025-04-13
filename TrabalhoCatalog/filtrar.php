@@ -1,47 +1,49 @@
 <?php
-// Habilitar exibição de erros para depuração
+session_start();
+
+// Ativar erros para depuração
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-// Verifica se a pesquisa foi feita através do GET
+// Receber a busca
 $query = $_GET['q'] ?? '';
 
-// Definir os dados das séries
+// Dados das séries (poderia vir de include como em index.php)
 $series = [
     [
         "id" => 1,
         "titulo" => "Breaking Bad",
         "categoria" => "Drama",
         "ano" => 2008,
-        "imagem" => "img/breakingbad.jpg"
+        "imagem" => "/img/breakingbad.jpg"
     ],
     [
         "id" => 2,
         "titulo" => "Stranger Things",
         "categoria" => "Ficção Científica",
         "ano" => 2016,
-        "imagem" => "img/stranger-things.jpg"
+        "imagem" => "/img/stranger-things.jpg"
     ],
     [
         "id" => 3,
         "titulo" => "The Office",
         "categoria" => "Comédia",
         "ano" => 2005,
-        "imagem" => "img/the-office.jpg"
+        "imagem" => "/img/the-office.jpg"
     ],
     [
         "id" => 4,
         "titulo" => "Game of Thrones",
         "categoria" => "Fantasia, Drama",
         "ano" => 2011,
-        "imagem" => "img/game-of-thrones.jpg"
+        "imagem" => "/img/game-of-thrones.jpg"
     ],
     [
         "id" => 5,
         "titulo" => "Hannibal",
         "categoria" => "Crime, Drama, Horror",
         "ano" => 2013,
-        "imagem" => "img/hannibal.jpg"
+        "imagem" => "/img/hannibal.jpg"
     ],
     [
         "id" => 6,
@@ -94,11 +96,11 @@ $series = [
     ]
 ];
 
-// Filtra as séries com base na consulta
+// Filtrar séries com base na busca
 $filteredSeries = array_filter($series, function($serie) use ($query) {
     return stripos($serie['titulo'], $query) !== false ||
            stripos($serie['categoria'], $query) !== false ||
-           stripos($serie['ano'], $query) !== false;
+           stripos((string)$serie['ano'], $query) !== false;
 });
 ?>
 
@@ -107,50 +109,44 @@ $filteredSeries = array_filter($series, function($serie) use ($query) {
 <head>
     <meta charset="UTF-8">
     <title>Filtrar Séries</title>
-    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="./css/catalogo.css">
 </head>
 <body>
-
     <header>
         <nav>
             <h1 class="logo">Séries+</h1>
             <a href="index.php">Início</a>
-            <a href="filtrar.php">Filtrar</a>
+
+            <form action="filtrar.php" method="GET" style="display: inline;">
+                <input type="text" name="q" placeholder="Buscar por título, gênero ou ano" value="<?= htmlspecialchars($query) ?>">
+                <button type="submit">Buscar</button>
+            </form>
+
             <?php if (!isset($_SESSION["usuario"])): ?>
                 <a href="login.php">Login</a>
             <?php else: ?>
-                <a href="protegido.php">Área Protegida</a>
+                <a href="protegido.php">Nova Série</a>
                 <a href="logout.php">Sair</a>
             <?php endif; ?>
         </nav>
     </header>
 
     <main class="catalogo">
-        <div class="busca-container">
-            <h2>Buscar Série</h2>
-            <form class="busca-form" action="filtrar.php" method="GET">
-                <input type="text" name="q" placeholder="Digite o nome, gênero ou ano da série..." value="<?= htmlspecialchars($query) ?>">
-                <input type="submit" value="Buscar">
-            </form>
-        </div>
-
         <h2>Resultados da Busca</h2>
+
         <div class="grid-series">
             <?php if (empty($filteredSeries)): ?>
-                <p>Nenhuma série encontrada para sua pesquisa.</p>
+                <p style="color:white;">Nenhuma série encontrada para "<?= htmlspecialchars($query) ?>".</p>
             <?php else: ?>
                 <?php foreach ($filteredSeries as $serie): ?>
                     <div class="serie-card">
                         <img src="<?= $serie['imagem'] ?>" alt="<?= $serie['titulo'] ?>">
                         <h3><?= $serie['titulo'] ?></h3>
-                        <p><strong>Categoria:</strong> <?= $serie['categoria'] ?></p>
-                        <p><strong>Ano:</strong> <?= $serie['ano'] ?></p>
                         <a class="vermais-btn" href="detalhes.php?id=<?= $serie['id'] ?>">Ver mais</a>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
     </main>
-
 </body>
 </html>

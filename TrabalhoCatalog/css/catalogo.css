@@ -160,3 +160,51 @@ main.catalogo {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Estilo da seção de busca no filtrar.php */
+.busca-container {
+    background-color: #2f6b8f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.busca-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.busca-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.busca-form input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.busca-form input[type="submit"] {
+    background-color: #ffffff;
+    color: #22597e;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.busca-form input[type="submit"]:hover {
+    background-color: #dddddd;
+}

@@ -42,7 +42,6 @@ include_once "dados_series.php";
                 <div class="serie-card">
                     <img src="<?= $serie['imagem'] ?>" alt="<?= $serie['titulo'] ?>">
                     <h3><?= $serie['titulo'] ?></h3>
-                    <p><strong>Categoria:</strong> <?= $serie['categoria'] ?></p>
                     <a class="vermais-btn" href="detalhes.php?id=<?= $serie['id'] ?>">Ver mais</a>
                 </div>
             <?php endforeach; ?>

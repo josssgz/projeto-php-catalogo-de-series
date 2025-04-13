@@ -32,8 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,15 +40,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
+
+<header>
         <nav>
             <h1 class="logo">Séries+</h1>
             <a href="index.php">Início</a>
-
+    
         <?php if (!isset($_SESSION["usuario"])): ?>
             <a href="login.php">Login</a>
         <?php else: ?>
-            <!-- <a href="protegido.php">Nova Serie</a> -->
+            <a href="protegido.php">Nova Serie</a>
             <a href="logout.php">Sair</a>
         <?php endif; ?>
         </nav>

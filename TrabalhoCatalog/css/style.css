@@ -17,33 +17,64 @@ body {
 
 /* Cabeçalho */
 header {
-    width: 100%;
     background-color: #22597e;
-    padding: 15px 30px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+header nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-nav {
-    display: flex;
     align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+header .logo {
+    font-size: 28px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    color: white;
 }
 
-nav a:hover {
-    color: #d8eefd;
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.logo img {
-    height: 50px;
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Formulário de busca */
+header form {
+    display: flex;
+    gap: 10px;
+}
+
+header input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+header button {
+    background-color: #fff;
+    color: #22597e;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ddd;
 }
 
 /* Container principa */
