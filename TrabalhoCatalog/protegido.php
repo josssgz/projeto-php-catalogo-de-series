@@ -32,23 +32,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Catálogo de Séries</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./img/Netflix-Symbol.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
     <header>
         <nav>
-            <h1 class="logo"><img src="./img/Netflix-Logo.png" alt="" height="60"></h1>
-            <a href="index.php">Catálogo</a>
-            <a href="protegido.php">Área Protegida</a>
+            <h1 class="logo">Séries+</h1>
+            <a href="index.php">Início</a>
+
+        <?php if (!isset($_SESSION["usuario"])): ?>
+            <a href="login.php">Login</a>
+        <?php else: ?>
+            <!-- <a href="protegido.php">Nova Serie</a> -->
             <a href="logout.php">Sair</a>
-            
+        <?php endif; ?>
         </nav>
     </header>
 

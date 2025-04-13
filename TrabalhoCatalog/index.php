@@ -22,10 +22,9 @@ include_once "dados_series.php";
 <head>
     <meta charset="UTF-8">
     <title>Catálogo de Séries</title>
-    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="./css/catalogo.css">
 </head>
 <body>
-
     <header>
         <nav>
             <h1 class="logo">Séries+</h1>
@@ -36,15 +35,13 @@ include_once "dados_series.php";
                 <button type="submit">Buscar</button>
             </form>
 
-
-    <?php if (!isset($_SESSION["usuario"])): ?>
-        <a href="login.php">Login</a>
-    <?php else: ?>
-        <a href="protegido.php">Nova Serie</a>
-        <a href="logout.php">Sair</a>
-    <?php endif; ?>
-</nav>
-
+        <?php if (!isset($_SESSION["usuario"])): ?>
+            <a href="login.php">Login</a>
+        <?php else: ?>
+            <a href="protegido.php">Nova Serie</a>
+            <a href="logout.php">Sair</a>
+        <?php endif; ?>
+        </nav>
     </header>
 
     <main class="catalogo">

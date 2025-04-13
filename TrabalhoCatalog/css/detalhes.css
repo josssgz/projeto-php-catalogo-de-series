@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding-bottom: 50px;
+}
+
+header{
+  background-color: #1c1c1c;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+  
+/* ===== DETALHES ===== */
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalhes {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+  
+.detalhes h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+  
+.serie-imagem {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+  
+.detalhes p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #444;
+}
+  
+.detalhes p strong {
+  color: #000;
+}
+  
+/* ===== BOTÃO VOLTAR ===== */
+.botao-voltar {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+  
+.botao-voltar:hover {
+  background-color: #053174;
+}

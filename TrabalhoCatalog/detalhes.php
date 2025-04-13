@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Suponhamos que as séries estejam armazenadas em um banco de dados ou array como o exemplo anterior
 $series = [
     1 => [
@@ -9,7 +11,7 @@ $series = [
         'produtor' => 'AMC',
         'nota' => 9.5,
         'descricao' => 'A jornada intensa de Walter White, um professor de química frustrado que, após ser diagnosticado com câncer terminal, decide fabricar metanfetamina para sustentar sua família, mergulhando num mundo sombrio de crime, violência e transformação moral.',
-        'imagem' => 'https://example.com/breaking-bad.jpg'
+        'imagem' => 'img/breaking_bad.jpg'
     ],
     2 => [
         'id' => 2,
@@ -19,7 +21,7 @@ $series = [
         'produtor' => 'Netflix',
         'nota' => 8.7,
         'descricao' => 'Ambientada nos anos 80, a série mistura ficção científica com nostalgia retrô ao acompanhar um grupo de amigos que enfrentam criaturas de outra dimensão, experimentos secretos do governo e uma garota com poderes sobrenaturais chamada Eleven.',
-        'imagem' => 'https://example.com/stranger-things.jpg'
+        'imagem' => 'img/stranger_things.jpg'
     ],
     3 => [
         'id' => 3,
@@ -29,7 +31,7 @@ $series = [
         'produtor' => 'NBC',
         'nota' => 8.9,
         'descricao' => 'Com um humor sutil e situações absurdas, a série mostra a rotina da Dunder Mifflin através de um estilo documental, explorando as relações entre os funcionários, liderados pelo desajeitado, porém carismático, Michael Scott.',
-        'imagem' => 'https://example.com/the-office.jpg'
+        'imagem' => 'img/the_office.jpg'
     ],
     4 => [
         'id' => 4,
@@ -39,7 +41,7 @@ $series = [
         'produtor' => 'HBO',
         'nota' => 9.2,
         'descricao' => 'Baseada nos livros de George R. R. Martin, a série apresenta uma batalha épica por poder entre famílias nobres em Westeros, marcada por traições, batalhas épicas, criaturas mitológicas e uma ameaça gelada que ameaça toda a humanidade.',
-        'imagem' => 'https://example.com/game-of-thrones.jpg'
+        'imagem' => 'img/got.jpg'
     ],
     5 => [
         'id' => 5,
@@ -49,7 +51,7 @@ $series = [
         'produtor' => 'NBC',
         'nota' => 8.5,
         'descricao' => 'Explora a relação intensa entre o brilhante psiquiatra Dr. Hannibal Lecter, que esconde sua verdadeira identidade como um assassino canibal, e Will Graham, um investigador com empatia excepcional para entender a mente de serial killers.',
-        'imagem' => 'https://example.com/hannibal.jpg'
+        'imagem' => 'img/hannibal.jpg'
     ],
     6 => [
         'id' => 6,
@@ -59,7 +61,7 @@ $series = [
         'produtor' => 'Paramount+',
         'nota' => 7.4,
         'descricao' => 'Inspirada em operações reais da CIA, a série acompanha agentes femininas de elite inseridas em missões altamente perigosas no Oriente Médio, enfrentando dilemas éticos, conflitos pessoais e os limites da lealdade e do dever.',
-        'imagem' => 'https://example.com/lioness.jpg'
+        'imagem' => 'img/lioness.jpg'
     ],
     7 => [
         'id' => 7,
@@ -69,7 +71,7 @@ $series = [
         'produtor' => 'NBC',
         'nota' => 8.4,
         'descricao' => 'Uma abordagem leve e divertida ao gênero policial, seguindo o talentoso e imaturo detetive Jake Peralta e sua equipe excêntrica no 99º distrito do Brooklyn, com destaque para o humor sarcástico e a liderança do estoico Capitão Holt.',
-        'imagem' => 'https://example.com/brooklyn-nine-nine.jpg'
+        'imagem' => 'img/b99.jpg'
     ],
     8 => [
         'id' => 8,
@@ -79,7 +81,7 @@ $series = [
         'produtor' => 'Showtime',
         'nota' => 8.6,
         'descricao' => 'Dexter Morgan leva uma vida dupla como analista forense da polícia de Miami e assassino em série que segue um código moral: eliminar apenas aqueles que escaparam da justiça, lutando com sua consciência e sede por sangue.',
-        'imagem' => 'https://example.com/dexter.jpg'
+        'imagem' => 'img/dexter.jpg'
     ],
     9 => [
         'id' => 9,
@@ -89,7 +91,7 @@ $series = [
         'produtor' => 'AMC',
         'nota' => 8.1,
         'descricao' => 'Após acordar de um coma, o xerife Rick Grimes descobre um mundo devastado por zumbis e lidera um grupo de sobreviventes que enfrentam não apenas os mortos-vivos, mas também os horrores dos vivos em uma luta brutal pela sobrevivência.',
-        'imagem' => 'https://example.com/the-walking-dead.jpg'
+        'imagem' => 'img/the_walking_dead.jpg'
     ],
     10 => [
         'id' => 10,
@@ -99,7 +101,7 @@ $series = [
         'produtor' => 'Netflix',
         'nota' => 8.6,
         'descricao' => 'Com uma narrativa não linear, a série explora o trauma psicológico de uma família marcada por experiências paranormais dentro da mansão Hill, equilibrando terror sobrenatural e drama emocional com profundidade e simbolismo.',
-        'imagem' => 'https://example.com/maldicao-residencia-hill.jpg'
+        'imagem' => 'img/residence_hill.jpg'
     ],
     11 => [
         'id' => 11,
@@ -109,7 +111,7 @@ $series = [
         'produtor' => 'Comedy Central',
         'nota' => 8.7,
         'descricao' => 'Com humor ácido e irreverente, a série animada satiriza eventos atuais, celebridades e política através das aventuras politicamente incorretas de quatro crianças em uma pequena cidade do Colorado.',
-        'imagem' => 'https://example.com/south-park.jpg'
+        'imagem' => 'img/south_park.jpg'
     ],
     12 => [
         'id' => 12,
@@ -119,7 +121,7 @@ $series = [
         'produtor' => 'Netflix',
         'nota' => 7.7,
         'descricao' => 'Arisu e seus amigos são transportados para uma realidade paralela onde precisam competir em jogos mortais que testam suas habilidades físicas e psicológicas, lutando para sobreviver e desvendar os segredos do novo mundo.',
-        'imagem' => 'https://example.com/alice-in-borderland.jpg'
+        'imagem' => 'img/alice_in_borderland.jpg'
     ]
     // Adicione mais séries conforme necessário
 ];
@@ -139,28 +141,37 @@ if ($id && isset($series[$id])) {
 <head>
     <meta charset="UTF-8">
     <title>Detalhes da Série</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detalhes.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <h1 class="logo"><img src="./img/Netflix-Logo.png" alt="" height="60"></h1>
-        <a href="index.php">Catálogo</a>
-        <a href="login.php">Login</a>
-        <a href="logout.php">Sair</a>
-    </nav>
-</header>
+    <header>
+        <nav>
+            <h1 class="logo">Séries+</h1>
+            <a href="index.php">Início</a>
 
-<main class="detalhes">
-    <h1><?php echo $serie['titulo']; ?></h1>
-    <img src="<?php echo $serie['imagem']; ?>" alt="<?php echo $serie['titulo']; ?>" class="serie-imagem">
-    <p><strong>Gênero:</strong> <?php echo $serie['genero']; ?></p>
-    <p><strong>Ano:</strong> <?php echo $serie['ano']; ?></p>
-    <p><strong>Produtor:</strong> <?php echo $serie['produtor']; ?></p>
-    <p><strong>Nota:</strong> <?php echo $serie['nota']; ?></p>
-    <p><strong>Descrição:</strong> <?php echo $serie['descricao']; ?></p>
-</main>
+    <?php if (!isset($_SESSION["usuario"])): ?>
+        <a href="login.php">Login</a>
+    <?php else: ?>
+        <a href="protegido.php">Nova Serie</a>
+        <a href="logout.php">Sair</a>
+    <?php endif; ?>
+    
+        </nav>
+    </header>
+
+    <section>
+        <main class="detalhes">
+            <img src="<?php echo $serie['imagem']; ?>" alt="<?php echo $serie['titulo']; ?>" class="serie-imagem">
+            <h1><?php echo $serie['titulo']; ?></h1>
+            <p><strong>Gênero:</strong> <?php echo $serie['genero']; ?></p>
+            <p><strong>Ano:</strong> <?php echo $serie['ano']; ?></p>
+            <p><strong>Produtor:</strong> <?php echo $serie['produtor']; ?></p>
+            <p><strong>Nota:</strong> <?php echo $serie['nota']; ?></p>
+            <p><strong>Descrição:</strong> <?php echo $serie['descricao']; ?></p>
+        </main>
+        <a href="index.php" class="botao-voltar">Voltar</a>
+    </section>
 
 </body>
 </html>

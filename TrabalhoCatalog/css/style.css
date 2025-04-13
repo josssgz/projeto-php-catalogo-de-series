@@ -1,51 +1,80 @@
-/* === Filtro de busca === */
-.busca-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.busca-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #22597e;
-    font-size: 28px;
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding-bottom: 50px;
 }
 
-form.busca-form {
+header{
+    background-color: #1c1c1c;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+nav{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 24px;
 }
 
-form.busca-form input[type="text"] {
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
 }
 
-form.busca-form input[type="text"]:focus {
-    border-color: #22597e;
-    outline: none;
+.logo{
+    font-size: 30px;
+    font-weight: bold;
 }
 
-form.busca-form input[type="submit"] {
-    background-color: #22597e;
+/* ESTLIZAÇÃO FORMULÁRIO DE NOVA SÉRIE */
+.cadNovaSerie{
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: rgb(185, 185, 185);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: 'Nunito', sans-serif;
+}
+
+.add {
+    margin-top: 5px;
+}
+
+.topicos{
+    display: block;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.insercoes, .btnCadastrar{
+    width: 100%;
+    padding: 7px;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btnCadastrar {
+    background-color: green;
     color: white;
     border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    font-weight: bold;
+    margin-top: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
 }
 
-form.busca-form input[type="submit"]:hover {
-    background-color: #17425f;
+.btnCadastrar:hover {
+    background-color: rgb(1, 90, 1);
 }
