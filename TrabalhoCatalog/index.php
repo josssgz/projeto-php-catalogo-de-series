@@ -1,11 +1,17 @@
 <?php
 session_start();
 
-// Verifica se há séries cadastradas
+
+// Vê se tem séries cadastradas
 $catalogo = $_SESSION['catalogo'] ?? [];
 
 include_once "dados_series.php";
+
+// Adiciona as séries cadastradas pelo usuario no pag
+$catalogo = $_SESSION['catalogo'] ?? [];
+$series = array_merge($series, $catalogo); // junta fixos + novos
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +27,7 @@ include_once "dados_series.php";
             <a href="index.php">Início</a>
     
             <form action="filtrar.php" method="GET" style="display: inline;">
-                <input type="text" name="busca" placeholder="Buscar por título, gênero ou ano">
+                <input type="text" name="busca" placeholder="Buscar título, gênero, ano" required>
                 <button type="submit">Buscar</button>
             </form>
 
@@ -40,7 +46,7 @@ include_once "dados_series.php";
         <div class="grid-series">
             <?php foreach ($series as $serie): ?>
                 <div class="serie-card">
-                    <img src="<?= $serie['imagem'] ?>" alt="<?= $serie['titulo'] ?>">
+                <img src="<?= $serie['imagem_catalogo'] ?? $serie['imagem'] ?>" alt="<?= $serie['titulo'] ?>">
                     <h3><?= $serie['titulo'] ?></h3>
                     <a class="vermais-btn" href="detalhes.php?id=<?= $serie['id'] ?>">Ver mais</a>
                 </div>

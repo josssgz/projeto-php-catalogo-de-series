@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_SESSION['usuario'])) {
-    header("Location: index.php");  // Redireciona para a página inicial se já estiver logado
+    header("Location: index.php");
     exit;
 }
 
@@ -54,12 +54,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <input type="submit" value="Entrar">
 
-        <div class="forgot">
-            <a href="criar-conta.php">Criar nova conta</a>
-        </div>
-
+        <!-- Mensagem de erro -->
         <?php if (!empty($mensagem)) echo $mensagem; ?>
     </form>
+
+    <!-- Link de voltar -->
+    <div class="forgot">
+        <a href="index.php">← Voltar sem logar</a>
+    </div>
 </div>
 
 </body>
