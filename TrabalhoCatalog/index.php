@@ -7,16 +7,6 @@ $catalogo = $_SESSION['catalogo'] ?? [];
 include_once "dados_series.php";
 ?>
 
-<nav>
-    <?php if (isset($_SESSION["usuario"])): ?>
-        <span>Bem-vindo, <?= $_SESSION["usuario"] ?></span>
-        <a href="logout.php">Sair</a>
-    <?php else: ?>
-        <a href="login.php">Login</a>
-    <?php endif; ?>
-</nav>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
