@@ -1,77 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
-
-body {
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
+body {
+    background-color: #49738f;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #1c1c1c;
+    width: 100%;
+    background-color: #22597e;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    font-size: 40px;
-    font-family: 'Bebas Neue', sans-serif;
+    gap: 20px;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.logo {
-    margin-top: 30px;
-    margin-bottom: 15px;
+nav a:hover {
+    color: #d8eefd;
 }
 
-/* ------------------- ÁREA PROTEGIDA ------------------- */
+.logo img {
+    height: 50px;
+}
 
-.cadNovaSerie{
-    max-width: 1200px;
-    margin: 30px auto;
-    background-color: rgb(185, 185, 185);
-    padding: 30px;
+/* Container principa */
+.cadNovaSerie {
+    background: #fff;
+    padding: 40px 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    font-family: 'Nunito', sans-serif;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
+/* Título  */
 .add {
-    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #222;
 }
 
-.topicos{
+/* Labels dos campos */
+.topicos {
     display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
     margin-top: 15px;
-    font-size: 17px;
+    color: #444;
 }
 
-.insercoes, .btnCadastrar{
+/* Inputs e Textarea */
+.insercoes {
     width: 100%;
-    padding: 7px;
-    margin-top: 3px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    background: #f1f1f1;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    font-size: 14px;
 }
 
+textarea.insercoes {
+    resize: none;
+}
+
+/* Botão */
 .btnCadastrar {
-    background-color: rgb(207, 145, 30);
-    color: white;
+    width: 100%;
+    background: #22597e;
+    color: #fff;
+    padding: 12px;
     border: none;
-    margin-top: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
 }
 
 .btnCadastrar:hover {
-    background-color: rgb(1, 90, 1);
+    background: #1c4a6a;
 }
 
-/* ----------------------- INDEX ----------------------- */
+/* Mensagem de sucesso */
+h3 {
+    color: #22597e;
+    background-color: #e7f3ff;
+    border: 1px solid #bddaff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-size: 15px;
+}
